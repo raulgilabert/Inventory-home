@@ -60,7 +60,7 @@ class MainWeb(tornado.web.RequestHandler):
             self.redirect_to_main()
 
         else:
-            cursor.execute("SELECT * FROM data")
+            cursor.execute("SELECT * FROM data ORDER BY Name")
 
             data = cursor.fetchall()
 
@@ -71,6 +71,8 @@ class MainWeb(tornado.web.RequestHandler):
 
                 if num < 0:
                     num = 0
+
+                print(num)
 
                 dictionary[element[0]] = {
                     "cantidad": element[1],
@@ -123,5 +125,5 @@ if __name__ == "__main__":
     global V
     V = 0
 
-    Application().listen(8888)
+    Application().listen(8000)
     tornado.ioloop.IOLoop.instance().start()
