@@ -1,0 +1,37 @@
+table {
+    border-collapse: collapse;
+}
+
+tr {
+	border: none;
+}
+
+td {
+	padding: 5px;
+    text-align:center;
+    width: 120px
+}
+
+th {
+	padding: 5px;
+    text-align:center;
+    width: 120px
+}
+
+.el {
+    width: 250px
+}
+
+.left {
+    border-right: 1px solid #000;
+}
+
+.title {
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+.input {
+    width: 98%;
+}
+
